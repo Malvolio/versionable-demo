@@ -1,5 +1,7 @@
 angular.module("versionableDemo", [])
-  .controller("LoginCtrl",
+  .config(["$sceDelegateProvider", function($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['https://rawgit.com/**']);
+  }).controller("LoginCtrl",
               ["LoginService", function(LoginService) {
                 var lc = this;
                 
