@@ -1,10 +1,19 @@
 <link rel="stylesheet" href="login.css"/>
 
-<div class="login" ng-controller="LoginCtrl">
-  <h1>The January Version of the Login Page</h1>
-  <form>
-   <p><label> Username: <input name="username"/> </label></p>
-   <p><label> Password: <input name="password" type="password"/> </label></p>
+<div class="login" ng-controller="LoginCtrl as lc">
+  <h1>The Febuary Version of the Login Page</h1>
+  <form ng-submit="lc.submit(username, password)">
+   <p><label> Username: <input name="username" ng-model="username"/> </label></p>
+   <p><label> Password: <input name="password" ng-model="password" type="password"/> </label></p>
    <p><button type="submit">Submit</button></p>
   </form>
+  <p class="result">{{lc.result}}</p>
+  <p class="error" ng-if="lc.failed">Hint, the username is "admin" and the password does not matter</p>
+  <h3>Changes</h3>
+  <ul>
+    <li>Actually does something 
+    <li>Some hinting 
+    <li>Some colors
+  </ul>
+    
 </div>
