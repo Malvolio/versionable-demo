@@ -7,9 +7,8 @@ angular.module("versionableDemo", [])
                 lc.submit = function(username, password) {
                   LoginService.doLogin(username, password)
                     .then(function() {
-                      lc.result = "It worked!"
                       lc.failed = false; 
-
+                      lc.success = true;
                     })
                     .catch(function() {
                       lc.result = "It failed!"

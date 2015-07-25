@@ -1,6 +1,12 @@
 .login {
-    padding: 100px;
+    border-color: black;
+    border-radius: 40px;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 10px 10px lightgray;
     font-family: Lato;
+    margin: 100px;
+    padding: 80px 100px 100px;
 }
 
 .error {
