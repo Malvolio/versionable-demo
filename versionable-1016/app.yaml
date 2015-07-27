@@ -12,15 +12,17 @@ handlers:
 - url: /static/
   static_dir: static
 
+- url: /version/.*
+  script: main.app
+
+
+
 - url: /
   static_files: static/index.html
   upload: static/index.html
 
 
 
-
-
-
 libraries:
-- name: webapp2
-  version: "2.5.2"
+- name: jinja2
+  version: "2.6"
